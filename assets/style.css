@@ -219,3 +219,19 @@ h1,h2,h3{font-weight:600;line-height:1.18;letter-spacing:.01em}
   *{scroll-behavior:auto}
   .scroll-cue svg{animation:none}
 }
+
+/* footer credit link */
+.footer-credit a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(255,210,138,.4);transition:color .2s,border-color .2s}
+.footer-credit a:hover,.footer-credit a:focus-visible{color:var(--amber);border-color:var(--amber)}
+
+/* back-to-top button (custom: gradient disc, fade+rise in, hover lift) */
+.to-top{position:fixed;right:clamp(16px,3vw,30px);bottom:clamp(16px,3vw,30px);z-index:90;
+  width:52px;height:52px;border:none;border-radius:50%;cursor:pointer;
+  display:grid;place-items:center;color:#1a0d18;
+  background:var(--grad);box-shadow:0 8px 24px rgba(214,90,142,.42),0 0 0 1px rgba(255,210,138,.25) inset;
+  opacity:0;visibility:hidden;transform:translateY(16px) scale(.85);
+  transition:opacity .35s ease,transform .35s cubic-bezier(.2,.9,.3,1.3),visibility .35s,box-shadow .25s}
+.to-top.show{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+.to-top:hover,.to-top:focus-visible{transform:translateY(-4px) scale(1.06);box-shadow:0 12px 30px rgba(244,164,76,.5),0 0 0 1px rgba(255,210,138,.4) inset;outline:none}
+.to-top svg{width:24px;height:24px}
+@media (max-width:480px){.to-top{width:46px;height:46px}.to-top svg{width:21px;height:21px}}

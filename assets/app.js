@@ -170,3 +170,18 @@
     }, 150);
   });
 })();
+
+/* back-to-top button */
+(function () {
+  var btn = document.getElementById("toTop");
+  if (!btn) return;
+  function onScroll() {
+    if (window.scrollY > window.innerHeight) btn.classList.add("show");
+    else btn.classList.remove("show");
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+  btn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+})();
