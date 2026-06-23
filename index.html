@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>丘壑 STRATA｜生成式地景與沉浸式裝置設計工作室</title>
+<meta name="description" content="丘壑 STRATA 是一間位於台北的生成式地景與沉浸式裝置設計工作室。我們以即時運算、投影 mapping 與互動科技,將自然的丘壑起伏轉化為可走入的光之地景,為展場、品牌與公共空間打造沉浸式體驗。">
+<meta name="keywords" content="生成式地景,沉浸式裝置,互動藝術,新媒體藝術,投影 mapping,展場設計,光雕,即時運算藝術,台北裝置藝術,沉浸式體驗設計">
+<link rel="canonical" href="https://izzo24.github.io/strata-studio/">
+<meta name="author" content="丘壑 STRATA">
+<meta name="theme-color" content="#120a1f">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="丘壑 STRATA">
+<meta property="og:title" content="丘壑 STRATA｜生成式地景與沉浸式裝置設計工作室">
+<meta property="og:description" content="以即時運算與投影科技,將自然的丘壑起伏轉化為可走入的光之地景。台北沉浸式裝置設計工作室。">
+<meta property="og:url" content="https://izzo24.github.io/strata-studio/">
+<meta property="og:image" content="https://izzo24.github.io/strata-studio/images/hero.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="丘壑 STRATA｜生成式地景與沉浸式裝置設計工作室">
+<meta name="twitter:description" content="以即時運算與投影科技,將自然的丘壑起伏轉化為可走入的光之地景。">
+<meta name="twitter:image" content="https://izzo24.github.io/strata-studio/images/hero.webp">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23120a1f'/%3E%3Cpath d='M8 44c8-10 14-2 22-12s14-4 26-16' fill='none' stroke='%23f4a44c' stroke-width='3.5' stroke-linecap='round'/%3E%3Cpath d='M8 52c8-9 16 0 24-10s16-2 24-12' fill='none' stroke='%23d65a8e' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/style.css?v=1">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://izzo24.github.io/strata-studio/#org",
+      "name": "丘壑 STRATA",
+      "alternateName": "STRATA Studio",
+      "url": "https://izzo24.github.io/strata-studio/",
+      "logo": "https://izzo24.github.io/strata-studio/images/hero.webp",
+      "description": "台北生成式地景與沉浸式裝置設計工作室,專注於即時運算、投影 mapping 與互動科技。",
+      "areaServed": "TW",
+      "knowsAbout": ["生成式地景", "沉浸式裝置", "互動藝術", "投影 mapping", "新媒體藝術", "展場設計"]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://izzo24.github.io/strata-studio/#service",
+      "name": "丘壑 STRATA 沉浸式裝置設計",
+      "image": "https://izzo24.github.io/strata-studio/images/work-1.webp",
+      "url": "https://izzo24.github.io/strata-studio/",
+      "telephone": "+886-2-2700-1043",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "信義路四段 188 號 7 樓",
+        "addressLocality": "台北市",
+        "addressRegion": "信義區",
+        "postalCode": "110",
+        "addressCountry": "TW"
+      },
+      "areaServed": "台灣"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://izzo24.github.io/strata-studio/#website",
+      "url": "https://izzo24.github.io/strata-studio/",
+      "name": "丘壑 STRATA",
+      "inLanguage": "zh-Hant",
+      "publisher": { "@id": "https://izzo24.github.io/strata-studio/#org" }
+    },
+    {
+      "@type": "ItemList",
+      "name": "丘壑 STRATA 精選作品",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "流丘・夜間光之地景" },
+        { "@type": "ListItem", "position": 2, "name": "等高・互動投影展場" },
+        { "@type": "ListItem", "position": 3, "name": "潮脈・動態 LED 波形雕塑" },
+        { "@type": "ListItem", "position": 4, "name": "層巒・建築立面光雕" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="bg-veil" aria-hidden="true"></div>
+
+<header class="site-header" id="top">
+  <a class="brand" href="#top" aria-label="丘壑 STRATA 首頁">
+    <svg class="brand-mark" viewBox="0 0 64 64" width="34" height="34" aria-hidden="true">
+      <path d="M6 42c9-11 15-2 24-13s15-4 28-17" fill="none" stroke="var(--amber)" stroke-width="3.4" stroke-linecap="round"/>
+      <path d="M6 51c9-10 17 0 26-11s17-2 26-13" fill="none" stroke="var(--magenta)" stroke-width="3.4" stroke-linecap="round"/>
+    </svg>
+    <span class="brand-text"><b>丘壑</b><i>STRATA</i></span>
+  </a>
+  <nav class="site-nav" aria-label="主選單">
+    <a href="#about">理念</a>
+    <a href="#works">作品</a>
+    <a href="#services">服務</a>
+    <a href="#process">流程</a>
+    <a href="#contact" class="nav-cta">洽談合作</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="開啟選單" aria-expanded="false">
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">生成式地景 ・ 沉浸式裝置</p>
+      <h1>把丘壑的起伏<br>化成可以走入的光</h1>
+      <p class="hero-lead">丘壑 STRATA 是一間台北的新媒體藝術工作室。我們以即時運算、投影 mapping 與互動感測,將山的稜線、水的波動與風的紋理,重新生成為一片片流動的光之地景,讓觀者不只是觀看,而是踏進其中。</p>
+      <div class="hero-actions">
+        <a href="#works" class="btn btn-primary">探索作品</a>
+        <a href="#contact" class="btn btn-ghost">展開合作</a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="向下捲動">
+      <span>向下捲動</span>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 4v16M6 14l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+
+  <!-- ABOUT / 理念 -->
+  <section class="section" id="about">
+    <div class="wrap two-col">
+      <div class="col-head">
+        <p class="sec-eyebrow">理念</p>
+        <h2 class="sec-title">在運算與自然之間,<br>尋找一道地平線</h2>
+      </div>
+      <div class="col-body">
+        <p>我們相信,最動人的數位影像並非憑空而生,而是對自然秩序的再翻譯。地層的層巒、沙丘的脊線、潮汐的進退——這些丘壑之形蘊含著時間累積的節奏。丘壑 STRATA 以程式化的方式,把這些節奏抽取出來,讓它們在即時運算的畫面裡重新呼吸。</p>
+        <p>對我們而言,一件沉浸式裝置不是一塊巨大的螢幕,而是一個會回應人的場域。當觀者走近、停留、伸手,光的地景也隨之起伏改變。科技在這裡退到幕後,留下的是一種安靜而遼闊的感受:像是站在黃昏的山稜上,看見光從遠方緩緩漫過來。</p>
+        <ul class="creed">
+          <li><span class="creed-k">以自然為母題</span>每件作品都源自一種真實的地貌與其運動邏輯。</li>
+          <li><span class="creed-k">以運算為筆觸</span>即時生成而非預錄影片,讓畫面永不重複。</li>
+          <li><span class="creed-k">以身體為尺度</span>空間、動線與感測,讓觀者成為作品的一部分。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap stats">
+      <div class="stat"><b>09</b><span>年新媒體藝術經驗</span></div>
+      <div class="stat"><b>120+</b><span>件展演與空間裝置</span></div>
+      <div class="stat"><b>16</b><span>座美術館與雙年展合作</span></div>
+      <div class="stat"><b>4</b><span>項國際新媒體獎項</span></div>
+    </div>
+  </section>
+
+  <!-- WORKS / 作品 -->
+  <section class="section section-works" id="works">
+    <div class="wrap">
+      <p class="sec-eyebrow">作品</p>
+      <h2 class="sec-title">精選地景</h2>
+      <p class="sec-intro">從美術館展間到城市建築立面,我們以光與運算,在不同尺度的空間裡生成屬於該地的丘壑。</p>
+    </div>
+    <div class="wrap works-grid">
+      <article class="work work-wide">
+        <div class="work-media"><img src="./images/hero.webp" alt="黃昏時分流動起伏的沙丘地景,天空由靛藍漸層至琥珀色" width="1280" height="720" loading="lazy"></div>
+        <div class="work-info">
+          <p class="work-tag">即時運算 ・ 沉浸投影</p>
+          <h3>流丘・夜間光之地景</h3>
+          <p>為當代美術館跨年特展打造的環形沉浸空間。三十公尺的弧形牆面上,生成式的沙丘稜線隨著一段虛擬的日落緩緩位移,觀者行走其間,腳步聲被轉譯為地表的細微漣漪。</p>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-media"><img src="./images/work-1.webp" alt="黑暗展間中投影於地面與牆面的發光等高線互動裝置" width="1280" height="720" loading="lazy"></div>
+        <div class="work-info">
+          <p class="work-tag">互動感測 ・ 地面投影</p>
+          <h3>等高・互動投影展場</h3>
+          <p>以紅外線感測捕捉觀者位置,地面的等高線會如水波般避開、再聚攏,讓人以身體「畫」出一張不斷變形的地圖。</p>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-media"><img src="./images/work-2.webp" alt="暗色展廳中由密集光點構成的動態 LED 波形雕塑" width="1024" height="768" loading="lazy"></div>
+        <div class="work-info">
+          <p class="work-tag">動態雕塑 ・ LED 矩陣</p>
+          <h3>潮脈・動態 LED 波形雕塑</h3>
+          <p>一萬兩千枚可定址光點懸吊成一面起伏的曲面,以海潮資料驅動,將遠方港口的即時浪高,化為展廳裡緩慢呼吸的光之潮汐。</p>
+        </div>
+      </article>
+
+      <article class="work work-wide">
+        <div class="work-media"><img src="./images/work-3.webp" alt="黃昏建築混凝土立面上的地形光雕投影,洋紅與琥珀光線" width="1280" height="720" loading="lazy"></div>
+        <div class="work-info">
+          <p class="work-tag">建築光雕 ・ 投影 mapping</p>
+          <h3>層巒・建築立面光雕</h3>
+          <p>為城市藝術節設計的開幕之作。我們以建築立面為畫布,讓一層層山巒自地面生長、漫過整棟建築,最後化為漫天星塵。十五分鐘的循環,沒有一刻完全相同。</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SERVICES / 服務 -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <p class="sec-eyebrow">服務</p>
+      <h2 class="sec-title">我們能為你生成什麼</h2>
+      <p class="sec-intro">從概念到落地,丘壑 STRATA 提供一條龍的沉浸式體驗設計與工程整合。</p>
+    </div>
+    <div class="wrap svc-grid">
+      <article class="svc">
+        <svg class="svc-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 32c8-9 13-2 21-11s13-3 15-5" fill="none" stroke="var(--amber)" stroke-width="2.4" stroke-linecap="round"/><path d="M6 39c8-8 15 0 22-9s10-2 14-5" fill="none" stroke="var(--magenta)" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <h3>沉浸式空間裝置</h3>
+        <p>環形投影、地面互動、多投影機融接的整合設計,為美術館、品牌旗艦與常設展打造可走入的光之場域。</p>
+      </article>
+      <article class="svc">
+        <svg class="svc-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="11" width="30" height="20" rx="2" fill="none" stroke="var(--amber)" stroke-width="2.4"/><path d="M16 38h16M24 31v7" fill="none" stroke="var(--magenta)" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <h3>建築投影 mapping</h3>
+        <p>立面光雕、地標光節、城市藝術季開幕製作,從建模對位到內容生成,完成大尺度的戶外光之敘事。</p>
+      </article>
+      <article class="svc">
+        <svg class="svc-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="13" fill="none" stroke="var(--amber)" stroke-width="2.4"/><path d="M24 11v26M11 24h26" fill="none" stroke="var(--magenta)" stroke-width="2.4"/></svg>
+        <h3>即時生成內容</h3>
+        <p>以資料、聲音或現場感測驅動的即時運算影像,讓每一場演出與每一次走訪,都是獨一無二的版本。</p>
+      </article>
+      <article class="svc">
+        <svg class="svc-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M14 34V20M24 34V14M34 34V24" fill="none" stroke="var(--amber)" stroke-width="2.4" stroke-linecap="round"/><path d="M10 38h28" fill="none" stroke="var(--magenta)" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <h3>體驗策展與顧問</h3>
+        <p>從敘事主軸、動線規劃到技術選型,陪伴品牌與機構把一個抽象的概念,長成一個完整的沉浸式體驗。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- PROCESS / 流程 -->
+  <section class="section section-process" id="process">
+    <div class="wrap">
+      <p class="sec-eyebrow">流程</p>
+      <h2 class="sec-title">從一道稜線到一座場域</h2>
+    </div>
+    <ol class="wrap proc-list">
+      <li class="proc">
+        <span class="proc-no">01</span>
+        <h3>勘景與對話</h3>
+        <p>實地丈量空間的尺度與光線,並與你深談這次想留給觀者的感受。一切從理解地貌開始。</p>
+      </li>
+      <li class="proc">
+        <span class="proc-no">02</span>
+        <h3>生成研究</h3>
+        <p>以程式建立地景的運動模型,快速產出多版動態原型,在運算的可能性裡篩選出最對的那一種起伏。</p>
+      </li>
+      <li class="proc">
+        <span class="proc-no">03</span>
+        <h3>空間整合</h3>
+        <p>投影對位、感測佈點、結構與電力整合,把螢幕上的地景準確地落進真實的空間裡。</p>
+      </li>
+      <li class="proc">
+        <span class="proc-no">04</span>
+        <h3>現場調校與維運</h3>
+        <p>開展前逐幀校色與互動微調,展期間提供穩定的遠端監控與現場支援,讓地景始終流動。</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- CONTACT / 聯絡 -->
+  <section class="section section-contact" id="contact">
+    <div class="wrap contact-inner">
+      <div class="contact-copy">
+        <p class="sec-eyebrow">聯絡</p>
+        <h2 class="sec-title">讓我們一起,<br>生成一片地景</h2>
+        <p>無論是一場展演、一面建築立面,還是一個還很模糊的念頭,我們都樂於聆聽。留下訊息,丘壑 STRATA 會在兩個工作天內回覆。</p>
+        <dl class="contact-meta">
+          <div><dt>來信</dt><dd>hello@strata.studio</dd></div>
+          <div><dt>電話</dt><dd>+886 2 2700 1043</dd></div>
+          <div><dt>工作室</dt><dd>台北市信義區信義路四段 188 號 7 樓</dd></div>
+        </dl>
+      </div>
+      <form class="contact-form" id="contactForm" novalidate>
+        <label>稱呼<input type="text" name="name" autocomplete="name" required></label>
+        <label>電子郵件<input type="email" name="email" autocomplete="email" required></label>
+        <label>專案類型
+          <select name="type">
+            <option>沉浸式空間裝置</option>
+            <option>建築投影 mapping</option>
+            <option>即時生成內容</option>
+            <option>體驗策展與顧問</option>
+            <option>其他</option>
+          </select>
+        </label>
+        <label>專案描述<textarea name="message" rows="4" required></textarea></label>
+        <button type="submit" class="btn btn-primary">送出洽詢</button>
+        <p class="form-note" id="formNote" hidden>感謝你的來信,我們已收到,將盡快與你聯繫。</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <span class="brand-text"><b>丘壑</b><i>STRATA</i></span>
+      <p>生成式地景與沉浸式裝置設計工作室。以即時運算與光,翻譯自然的丘壑。</p>
+    </div>
+    <nav class="footer-nav" aria-label="頁尾選單">
+      <a href="#about">理念</a>
+      <a href="#works">作品</a>
+      <a href="#services">服務</a>
+      <a href="#process">流程</a>
+      <a href="#contact">聯絡</a>
+    </nav>
+  </div>
+  <div class="wrap footer-base">
+    <p>© 2026 丘壑 STRATA. 版權所有。</p>
+    <p class="footer-credit">本站由 橋序創研 BridgeSeqLab 製作</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="./assets/app.js?v=1"></script>
+</body>
+</html>
